@@ -1,0 +1,8 @@
+# Runs daily at 07:00 AM IST (Asia/Kolkata)
+# 1) Open crontab: crontab -e
+# 2) Add the following lines (update paths):
+
+CRON_TZ=Asia/Kolkata
+0 7 * * * /usr/bin/python3 /workspace/Dhirajpilani_SampleAI/job_alert_system.py --mode once >> /workspace/Dhirajpilani_SampleAI/cron.log 2>&1
+
+# Optional: if environment variables are in .env, use a wrapper shell script to export them first.
